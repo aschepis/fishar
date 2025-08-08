@@ -2,13 +2,13 @@ import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:camera/camera.dart';
 import 'package:image/image.dart' as img;
-import 'package:tflite_flutter/tflite_flutter.dart';
+// import 'package:tflite_flutter/tflite_flutter.dart';
 // import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
 import '../models/fish_detection.dart';
 
 class FishDetectionService {
-  Interpreter? _detectionInterpreter;
-  Interpreter? _classificationInterpreter;
+  // Interpreter? _detectionInterpreter;  // Removed for compatibility
+  // Interpreter? _classificationInterpreter;  // Removed for compatibility
   bool _isInitialized = false;
   
   static const int _detectionInputSize = 300;
@@ -155,8 +155,8 @@ class FishDetectionService {
   }
 
   void dispose() {
-    _detectionInterpreter?.close();
-    _classificationInterpreter?.close();
+    // _detectionInterpreter?.close();  // Removed for compatibility
+    // _classificationInterpreter?.close();  // Removed for compatibility
     _isInitialized = false;
   }
 }
